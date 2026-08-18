@@ -1,5 +1,5 @@
 
-```# Whiskers
+# Whiskers
 
 <div align="center">
 
@@ -19,30 +19,30 @@ Whiskers is a sophisticated tool designed for embedding malicious payloads into 
 
 ## Features
 
-- **Multi-format Support**: Embed payloads in PNG, JPG, SYS, DLL, EXE, DOC, DOCX, PDF, MP3, MP4, AVI, and GIF files
-- **Advanced Steganography**: Format-specific embedding techniques for maximum stealth
-- **Payload Encryption**: Fernet symmetric encryption with optional password protection
-- **Compression**: Zlib compression to reduce payload size
-- **Obfuscation**: XOR and base64 encoding to evade signature-based detection
-- **Extraction Capabilities**: Extract embedded payloads from carrier files
-- **Stub Generation**: Create droppers that can download and execute payloads
+* **Multi-format Support**: Embed payloads in PNG, JPG, SYS, DLL, EXE, DOC, DOCX, PDF, MP3, MP4, AVI, and GIF files
+* **Advanced Steganography**: Format-specific embedding techniques for maximum stealth
+* **Payload Encryption**: Fernet symmetric encryption with optional password protection
+* **Compression**: Zlib compression to reduce payload size
+* **Obfuscation**: XOR and base64 encoding to evade signature-based detection
+* **Extraction Capabilities**: Extract embedded payloads from carrier files
+* **Stub Generation**: Create droppers that can download and execute payloads
 
 ## Installation
 
 ### Prerequisites
 
-- Python 3.6 or higher
-- pip package manager
+* Python 3.6 or higher
+* pip package manager
 
 ### Dependencies
 
 ```bash
 pip install -r requirements.txt
-````
+```
 
 ### Requirements
 
-```text
+```
 cryptography
 pefile
 olefile
@@ -165,4 +165,4 @@ Contributions are welcome. Please fork the repository and submit a pull request.
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.```
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
