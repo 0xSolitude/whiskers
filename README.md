@@ -158,11 +158,3 @@ Contributions are welcome. Please fork the repository and submit a pull request.
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## Disclaimer
-
-This tool is intended for educational and research purposes only. The authors are not responsible for any misuse of this software. Users are responsible for their actions and should comply with all applicable laws and regulations.
-
-## Support
-
-For support and questions, please open an issue on GitHub.
