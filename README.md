@@ -51,7 +51,7 @@ pyinstaller
 ### Embedding a Payload
 
 ```bash
-python whiskers.py embed carrier.png payload.exe output.png --password mypassword
+python whiskers.py embed carrier.png payload.exe output.png --password ilyzoji
 ```
 
 Options:
